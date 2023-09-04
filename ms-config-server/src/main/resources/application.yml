@@ -14,7 +14,6 @@ spring:
           #password:
           default-label: main
 
-
   security:
     user:
       name: root
