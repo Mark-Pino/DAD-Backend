@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8082
 springdoc:
   api-docs:
     enabled: true
@@ -13,7 +13,7 @@ spring:
     show-sql: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/catalogo
+    url: jdbc:mysql://localhost:3306/cliente
     username: root
     password:
 
