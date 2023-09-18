@@ -13,8 +13,12 @@ import java.util.Optional;
 public class ProductoServiceImpl implements ProductoService {
     @Autowired
     private ProductoRepository productoRepository;
+
     @Override
-    public List<Producto> listar() { return productoRepository.findAll(); }
+    public List<Producto> listar() {
+        return productoRepository.findAll();
+    }
+
     @Override
     public Producto guardar(Producto producto) {
         return productoRepository.save(producto);
