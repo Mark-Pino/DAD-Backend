@@ -17,7 +17,7 @@ public class PedidoController {
 
     @GetMapping()
     public ResponseEntity<List<Pedido>> list() {
-        return ResponseEntity.ok().body(pedidoService.listar());
+        return ResponseEntity.ok(pedidoService.listar());
     }
 
     @PostMapping()
@@ -36,13 +36,19 @@ public class PedidoController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteById(@PathVariable(required = true) Integer id) {
+    public ResponseEntity<List<Pedido>> deleteById(@PathVariable(required = true) Integer id) {
         pedidoService.eliminarPorId(id);
-        return "Eliminacion Correcta";
+        return ResponseEntity.ok(pedidoService.listar());
     }
     private ResponseEntity<Pedido> fallBackPedidoListarPorIdCB(@PathVariable(required = true) Integer id, RuntimeException e) {
         Pedido pedido = new Pedido();
         pedido.setId(90000);
+        Cliente cliente =new Cliente();
+        cliente.setNombre("Recurso no disponible del nombre del cliente");
+        cliente.setDireccion("no tiene direccion");
+        pedido.setCliente(cliente);
         return ResponseEntity.ok().body(pedido);
     }
+
 }
+
