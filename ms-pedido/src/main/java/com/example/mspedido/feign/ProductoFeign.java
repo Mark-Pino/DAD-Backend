@@ -11,4 +11,3 @@ public interface ProductoFeign {
     @GetMapping("/{id}")
     public ResponseEntity<Producto> listById(@PathVariable(required = true) Integer id);
 }
-

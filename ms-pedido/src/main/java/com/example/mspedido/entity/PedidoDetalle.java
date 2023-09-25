@@ -6,7 +6,6 @@ import lombok.Data;
 
 @Entity
 @Data
-
 public class PedidoDetalle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

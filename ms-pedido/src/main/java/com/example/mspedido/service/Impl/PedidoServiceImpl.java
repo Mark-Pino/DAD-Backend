@@ -1,4 +1,4 @@
-package com.example.mspedido.service.Impl;
+package com.example.mspedido.service.impl;
 
 import com.example.mspedido.dto.Cliente;
 import com.example.mspedido.dto.Producto;
@@ -16,10 +16,9 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class PedidoServiceImpl implements PedidoService{
+public class PedidoServiceImpl implements PedidoService {
     @Autowired
     private PedidoRepository pedidoRepository;
-
     @Autowired
     private ClienteFeign clienteFeign;
 
@@ -45,6 +44,7 @@ public class PedidoServiceImpl implements PedidoService{
     public Optional<Pedido> listarPorId(Integer id) {
         Pedido pedido = pedidoRepository.findById(id).get();
         Cliente cliente = clienteFeign.listById(pedido.getClienteId()).getBody();
+        System.out.println(cliente.toString());
         List<PedidoDetalle> pedidoDetalles = pedido.getDetalle().stream().map(pedidoDetalle -> {
             Producto producto = productoFeign.listById(pedidoDetalle.getProductoId()).getBody();
             pedidoDetalle.setProducto(producto);

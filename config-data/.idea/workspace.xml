@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="894ef04c-cc10-4e15-8d77-13824cb0c4a5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/ms-gateway-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ms-gateway-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-cliente/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-cliente/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-config-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-config-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/pom.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/ms-gateway-service.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-cliente/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/.idea/ms-gateway-server.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/src/main/java/com/example/msgatewayserver/MsGatewayServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/src/main/java/com/example/msgatewayserver/MsGatewayServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/src/test/java/com/example/msgatewayserver/MsGatewayServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-gateway-server/ms-gateway-server/src/test/java/com/example/msgatewayserver/MsGatewayServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ms-registry-server/src/main/java/com/example/msregistryserver/MsRegistryServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-registry-server/src/main/java/com/example/msregistryserver/MsRegistryServerApplication.java" afterDir="false" />
+>>>>>>> ce7bb54eedbcdcce65497fecfce1fba73b047217
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2UaVNS4G7NlFIXlN6pJcVB5Qzut" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "gateway-server",
+    "last_opened_file_path": "C:/Users/VM/Documents/proyectosJava/DAD_2023_2/config-data",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="894ef04c-cc10-4e15-8d77-13824cb0c4a5" name="Changes" comment="" />
+      <created>1693177637530</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693177637530</updated>
+      <workItem from="1693177638712" duration="2836000" />
+      <workItem from="1694041156255" duration="1409000" />
+      <workItem from="1694177042682" duration="4454000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

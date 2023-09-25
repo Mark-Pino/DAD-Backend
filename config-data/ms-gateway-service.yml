@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8070/eureka
+      defaultZone: http://localhost:8090/eureka
   instance:
     hostname: localhost
 
@@ -23,3 +23,8 @@ spring:
           uri: lb://ms-cliente-service
           predicates:
             - Path=/cliente/**
+        - id: ms-pedido-service
+          uri: lb://ms-pedido-service
+          predicates:
+            - Path=/pedido/**
+

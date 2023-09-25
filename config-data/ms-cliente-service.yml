@@ -1,11 +1,13 @@
 server:
   port: 8082
+
 springdoc:
   api-docs:
     enabled: true
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
+
 spring:
   jpa:
     hibernate.ddl-auto: update
@@ -13,14 +15,13 @@ spring:
     show-sql: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/cliente
+    url: jdbc:mysql://localhost:3306/ms_cliente
     username: root
     password:
-
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8070/eureka
+      defaultZone: http://localhost:8090/eureka
   instance:
     hostname: localhost
