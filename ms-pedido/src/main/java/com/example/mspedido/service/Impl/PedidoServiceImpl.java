@@ -21,7 +21,6 @@ public class PedidoServiceImpl implements PedidoService {
     private PedidoRepository pedidoRepository;
     @Autowired
     private ClienteFeign clienteFeign;
-
     @Autowired
     private ProductoFeign productoFeign;
 
@@ -44,13 +43,12 @@ public class PedidoServiceImpl implements PedidoService {
     public Optional<Pedido> listarPorId(Integer id) {
         Pedido pedido = pedidoRepository.findById(id).get();
         Cliente cliente = clienteFeign.listById(pedido.getClienteId()).getBody();
-        System.out.println(cliente.toString());
-        List<PedidoDetalle> pedidoDetalles = pedido.getDetalle().stream().map(pedidoDetalle -> {
+        List<PedidoDetalle> pedidoDetalles = pedido.getPedidoDetalles().stream().map(pedidoDetalle -> {
             Producto producto = productoFeign.listById(pedidoDetalle.getProductoId()).getBody();
             pedidoDetalle.setProducto(producto);
             return pedidoDetalle;
         }).collect(Collectors.toList());
-        pedido.setDetalle(pedidoDetalles);
+        pedido.setPedidoDetalles(pedidoDetalles);
         pedido.setCliente(cliente);
         return Optional.of(pedido);
     }

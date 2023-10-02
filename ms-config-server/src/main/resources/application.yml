@@ -1,3 +1,4 @@
+
 server:
   port: 7070
 spring:
@@ -7,11 +8,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Mark-Pino/DAD-Backend.git
-          search-paths: config-data
+          uri: https://github.com/noetipo/DAD-backend.git
           #username:
           #password:
-          default-label: resiliencia
+          search-paths: config-data
+          default-label: main
   security:
     user:
       name: root

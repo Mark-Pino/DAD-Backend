@@ -5,4 +5,3 @@ spring:
     active: development
   config:
     import: optional:configserver:http://root:s3cr3t@localhost:7070
-

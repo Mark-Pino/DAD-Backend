@@ -2,6 +2,7 @@ package com.example.mspedido.dto;
 
 import lombok.Data;
 
+
 @Data
 public class Cliente {
     private Integer id;

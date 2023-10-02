@@ -1,11 +1,12 @@
 server:
   port: 8083
+
 springdoc:
   api-docs:
     enabled: true
   swagger-ui:
     enabled: true
-    path: /doc/swagger-ui-html
+    path: /doc/swagger-ui.html
 
 spring:
   jpa:
