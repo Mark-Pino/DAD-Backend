@@ -1,5 +1,6 @@
 package com.example.mspedido.controller;
 
+import com.example.mspedido.dto.Cliente;
 import com.example.mspedido.entity.Pedido;
 import com.example.mspedido.service.PedidoService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
@@ -43,7 +44,7 @@ public class PedidoController {
     private ResponseEntity<Pedido> fallBackPedidoListarPorIdCB(@PathVariable(required = true) Integer id, RuntimeException e) {
         Pedido pedido = new Pedido();
         pedido.setId(90000);
-        Cliente cliente =new Cliente();
+        Cliente cliente = new Cliente();
         cliente.setNombre("Recurso no disponible del nombre del cliente");
         cliente.setDireccion("no tiene direccion");
         pedido.setCliente(cliente);
@@ -51,4 +52,3 @@ public class PedidoController {
     }
 
 }
-
