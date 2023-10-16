@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
 @Component
 public class JwtProvider {
     @Value("${jwt.secret}")
@@ -39,19 +38,21 @@ public class JwtProvider {
                 .compact();
     }
 
+
     public boolean validate(String token) {
         try {
             Jwts.parser().setSigningKey(secret).parseClaimsJws(token);
             return true;
-        }catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
 
-    public String getUserNameFromToken(String token){
+
+    public String getUserNameFromToken(String token) {
         try {
             return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody().getSubject();
-        }catch (Exception e) {
+        } catch (Exception e) {
             return "bad token";
         }
     }

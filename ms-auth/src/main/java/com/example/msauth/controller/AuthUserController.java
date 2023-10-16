@@ -1,5 +1,4 @@
 package com.example.msauth.controller;
-
 import com.example.msauth.dto.AuthUserDto;
 import com.example.msauth.entity.AuthUser;
 import com.example.msauth.entity.TokenDto;
@@ -14,6 +13,7 @@ public class AuthUserController {
     @Autowired
     AuthUserService authUserService;
 
+
     @PostMapping("/login")
     public ResponseEntity<TokenDto> login(@RequestBody AuthUserDto authUserDto) {
         TokenDto tokenDto = authUserService.login(authUserDto);
@@ -22,6 +22,7 @@ public class AuthUserController {
         return ResponseEntity.ok(tokenDto);
     }
 
+
     @PostMapping("/validate")
     public ResponseEntity<TokenDto> validate(@RequestParam String token) {
         TokenDto tokenDto = authUserService.validate(token);
@@ -29,6 +30,7 @@ public class AuthUserController {
             return ResponseEntity.badRequest().build();
         return ResponseEntity.ok(tokenDto);
     }
+
 
     @PostMapping("/create")
     public ResponseEntity<AuthUser> create(@RequestBody AuthUserDto authUserDto) {

@@ -15,6 +15,7 @@ import javax.persistence.Id;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class AuthUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

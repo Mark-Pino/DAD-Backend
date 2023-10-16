@@ -1,5 +1,4 @@
 package com.example.msgatewayserver.config;
-
 import com.example.msgatewayserver.dto.TokenDto;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
@@ -10,7 +9,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-
 @Component
 public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> {
     private WebClient.Builder webClient;
@@ -40,11 +38,15 @@ public class AuthFilter extends AbstractGatewayFilterFactory<AuthFilter.Config> 
         }));
     }
 
+
     public Mono<Void> onError(ServerWebExchange exchange, HttpStatus status){
         ServerHttpResponse response = exchange.getResponse();
         response.setStatusCode(status);
         return ((ServerHttpResponse) response).setComplete();
     }
 
+
     public static class Config {}
+
+
 }

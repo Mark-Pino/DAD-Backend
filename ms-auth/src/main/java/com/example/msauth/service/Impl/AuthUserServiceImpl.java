@@ -1,4 +1,4 @@
-package com.example.msauth.service.Impl;
+package com.example.msauth.service.impl;
 
 import com.example.msauth.dto.AuthUserDto;
 import com.example.msauth.entity.AuthUser;
@@ -21,6 +21,7 @@ public class AuthUserServiceImpl implements AuthUserService {
     @Autowired
     JwtProvider jwtProvider;
 
+
     @Override
     public AuthUser save(AuthUserDto authUserDto) {
         Optional<AuthUser> user = authRepository.findByUserName(authUserDto.getUserName());
@@ -31,10 +32,9 @@ public class AuthUserServiceImpl implements AuthUserService {
                 .userName(authUserDto.getUserName())
                 .password(password)
                 .build();
-
-
         return authRepository.save(authUser);
     }
+
 
     @Override
     public TokenDto login(AuthUserDto authUserDto) {
@@ -46,6 +46,7 @@ public class AuthUserServiceImpl implements AuthUserService {
         return null;
     }
 
+
     @Override
     public TokenDto validate(String token) {
         if (!jwtProvider.validate(token))
@@ -53,8 +54,7 @@ public class AuthUserServiceImpl implements AuthUserService {
         String username = jwtProvider.getUserNameFromToken(token);
         if (!authRepository.findByUserName(username).isPresent())
             return null;
-
-
         return new TokenDto(token);
     }
+
 }
