@@ -1,0 +1,62 @@
+<div class="bg-main min-vh-100 d-flex flex-row align-items-center">
+
+  <c-container>
+    <c-row class="d-flex justify-content-center ">
+      <c-col md="9">
+        <c-card-group class="card_login d-flex justify-content-center align-items-center">
+          <c-card  class="text-white py-5 card_main card_img">
+            <c-card-body class="text-center d-flex align-items-center justify-content-center">
+              <div>
+                <h2 class="text-main">Welcome!</h2>
+                <img src="../../../../assets/images/undraw_in_the_office_re_jtgc.svg" alt="" width="350" >
+              </div>
+            </c-card-body>
+          </c-card>
+          <c-card class="p-4 card_main d-flex align-items-center">
+            <c-card-body class="d-flex align-items-center">
+              <form cForm [formGroup]="loginForm">
+                <h1 class="text-h1">Iniciar Sesión</h1>
+                <p class="text-medium-emphasis">Sign In to your account</p>
+                <c-input-group class="mb-4 mt-4">
+                  <span cInputGroupText class="icon_g">
+                    <svg cIcon name="cilUser"></svg>
+                  </span>
+                  <input autoComplete="username" cFormControl placeholder="Username"  class="incongroup" formControlName="userName"/>
+                </c-input-group>
+                <c-input-group class="mb-4">
+                  <span cInputGroupText class="icon_g">
+                    <svg cIcon name="cilLockLocked"></svg>
+                  </span>
+                  <input
+                    class="incongroup"
+                    autoComplete="current-password"
+                    cFormControl
+                    placeholder="Password"
+                    type="password" formControlName="password"
+                  />
+                </c-input-group>
+                <c-row>
+                  <c-col xs="12" >
+                    <button cButton class="mt-3 w-100" class="btn_main" (click)="login()">
+                      Login
+                      <img src="../../../../assets/images/login.png" alt="">
+
+                    </button>
+
+                  </c-col>
+                  <c-col class="text-end pt-2">
+                    <button cButton class="px-0" color="link">
+                      Forgot password?
+                    </button>
+                  </c-col>
+                </c-row>
+              </form>
+            </c-card-body>
+          </c-card>
+        </c-card-group>
+      </c-col>
+    </c-row>
+  </c-container>
+</div>
+
+

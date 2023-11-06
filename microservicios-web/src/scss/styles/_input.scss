@@ -1,0 +1,169 @@
+.input-gm-search{
+ // width: 90%;
+}
+
+//.checkbox-gm{
+//  color: #1c3249 !important;
+//}
+//.checkbox-gm:checked{
+//  border-radius: 10px;
+//  outline: 3px solid $primary;
+//  color: $primary;
+//  font-size: 20px;
+//
+//}
+fieldset {
+  background-color: #eeeeee;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.20em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var($primary-dark);
+  background-color: $primary-table-head;
+}
+input[type="checkbox"] {
+  /* ...existing styles */
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.badge-gm{
+  margin-left: 5px !important;
+  margin-top: -5px !important;
+}
+
+
+
+.auto-parte-gm{
+  position: relative;
+  right: 1px;
+  top: 25px;
+}
+
+
+.file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+
+}
+
+.file-input label {
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background: linear-gradient(40deg,$primary, $primary);
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px !important;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+
+.file-name {
+  position: absolute;
+  bottom: -35px;
+  left: 10px;
+  font-size: 0.2rem;
+  color: #555;
+}
+
+input[type="file"]:hover + label,
+input[type="file"]:focus + label {
+  transform: scale(1.02);
+}
+
+/* Adding an outline to the label on focus */
+input[type="file"]:focus + label {
+  outline: 1px solid #000;
+  outline: -webkit-focus-ring-color auto 2px;
+}
+
+.img-load img{
+  opacity: 40%;
+}
+.auto-gm-img{
+  border: 8px solid white;
+}
+
+.input-gm-gruup-sm{
+  padding: 2px;
+  max-width: 140px;
+  input{
+    max-height: 23px;
+    padding: 2px !important;
+  }
+  button{
+    max-height: 23px;
+    margin: 0 ;
+    padding: 0 ;
+    font-size: 11px;
+    font-weight: 500;
+    color: white;
+  }
+}
+input{
+  border-left: 3px $primary solid !important;
+}
+/*
+
+.valid-input {
+  border-left: 5px $success solid !important;
+}
+.invalid-input {
+  border-left: 5px $danger solid !important;
+}
+
+*/
+
+
+.ng-valid:not(form) {
+  border-left: 3px solid $primary !important;
+}
+
+.ng-invalid:not(form) {
+  border-left: 3px solid #f62d51 !important;
+
+}

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-lg-1 col-md-1 col-sm-1 text-left">
+    <select class="form-control form-control-sm" id="per_page" (change)="changeValuePage($event.target)">
+      <option *ngFor="let p of perpages" [value]="p.id" [selected]="p.active">{{ p.id }}</option>
+    </select>
+  </div>
+  <label class="col-md-1 col-form-label required"> de &nbsp;<strong>{{pagination.total_lista}}</strong></label>
+  <div class="col-lg-10 col-md-8 col-sm-8 text-right">
+    <ngb-pagination [collectionSize]="pagination.total_lista" [(page)]="pagination.pagina_actual"
+                    size="sm" [rotate]="true" class="d-flex justify-content-end"
+                    [pageSize]="pagination.ver_por_pagina" [maxSize]="5" (pageChange)="loadPage($event)">
+    </ngb-pagination>
+  </div>
+</div>
+
+<!--
+<div class="row">
+  <div class="col-md-2">
+      <ngb-pagination class="d-flex justify-content-end" (pageChange)="onPageChange($attendance)" [boundaryLinks]="true" [disabled]="isDisabled"
+          size="sm" [pageSize]="dataPagination.size_page" [maxSize]="5" [collectionSize]="pagination.total" [(page)]="dataPagination.page"></ngb-pagination>
+  </div>
+</div>
+-->

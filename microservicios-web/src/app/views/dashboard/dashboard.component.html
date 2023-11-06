@@ -1,0 +1,128 @@
+<!--<app-widgets-dropdown></app-widgets-dropdown>
+<c-card class="mb-4">
+  <c-card-body>
+    <c-row>
+      <c-col sm="5">
+        <h4 class="card-title mb-0" id="traffic">Traffic</h4>
+        <div class="small text-medium-emphasis">January - December 2021</div>
+      </c-col>
+      <c-col class="d-none d-md-block" sm="7">
+        <button cButton class="float-end" color="primary">
+          <svg cIcon name="cilCloudDownload"></svg>
+        </button>
+        <form [formGroup]="trafficRadioGroup">
+          <c-button-group class="float-end me-3" role="group">
+            <input
+              class="btn-check"
+              formControlName="trafficRadio"
+              type="radio"
+              value="Day"
+            />
+            <label
+              (click)="setTrafficPeriod('Day')"
+              cButton
+              cFormCheckLabel
+              color="secondary"
+              variant="outline"
+            >Day</label>
+
+            <input
+              class="btn-check"
+              formControlName="trafficRadio"
+              type="radio"
+              value="Month"
+            />
+            <label
+              (click)="setTrafficPeriod('Month')"
+              cButton
+              cFormCheckLabel
+              color="secondary"
+              variant="outline"
+            >Month</label>
+
+            <input
+              class="btn-check"
+              formControlName="trafficRadio"
+              type="radio"
+              value="Year"
+            />
+            <label
+              (click)="setTrafficPeriod('Year')"
+              cButton
+              cFormCheckLabel
+              color="secondary"
+              variant="outline"
+            >Year</label>
+          </c-button-group>
+        </form>
+      </c-col>
+    </c-row>
+    <c-chart
+      [data]="mainChart.data"
+      [height]="300"
+      [ngStyle]="{ 'marginTop.px': 40 }"
+      [options]="mainChart.options"
+      [type]="mainChart.type"
+    >
+      Main chart
+    </c-chart>
+  </c-card-body>
+  <c-card-footer>
+    <c-row class="text-center" [md]="5" [xs]="1">
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Visits</div>
+        <strong>29.703 Users (40%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="success" value="40"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Unique</div>
+        <strong>24.093 Users (20%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="info" value="20"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Page views</div>
+        <strong>78.706 Views (60%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="warning" value="60"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">New Users</div>
+        <strong>22.123 Users (80%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar color="danger" value="80"></c-progress-bar>
+        </c-progress>
+      </c-col>
+      <c-col class="mb-sm-2 mb-0">
+        <div class="text-medium-emphasis">Bounce Rate</div>
+        <strong>Average Rate (40.15%)</strong>
+        <c-progress class="mt-2" thin>
+          <c-progress-bar value="40"></c-progress-bar>
+        </c-progress>
+      </c-col>
+    </c-row>
+  </c-card-footer>
+</c-card>
+
+<app-widgets-brand [withCharts]="true"></app-widgets-brand>-->
+
+
+
+
+<!--<div class="container my-5">
+  <ng-container *ngIf="hour >= 6 && hour < 12; else tarde">
+    <p class="text-center fs-4 fw-lighter">Buenos días!</p>
+  </ng-container>
+  <ng-template #tarde>
+    <p class="text-center fs-4 fw-lighter">Buenas tardes!</p>
+  </ng-template>
+  <h1 class="text-center" style="margin-top: -20px">Bienvenido {{user.name|uppercase}}</h1>
+  <p class="lead text-center">
+    Esta es tu sistema, ¡disfrútala!
+  </p>
+</div>-->
+<router-outlet></router-outlet>

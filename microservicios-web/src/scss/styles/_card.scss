@@ -1,0 +1,46 @@
+.btn-gm-sm {
+    font-size: 12px;
+    border-radius: 30px;
+}
+.bg-1 span, .bg-0 span{
+    position: absolute;
+    top: 1px;
+    color: rgba(250, 250, 250, 0.295);
+}
+.card-gm-border{
+  border: 3px solid black;
+  margin: 3px;
+  padding: 2px;
+  text-align: center;
+  max-height: 70px;
+  span{
+    font-weight: 600;
+  }
+  p{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 200;
+  }
+}
+.card-gm-header{
+  color: white;
+  background-image: linear-gradient(
+      $primary-table-head,
+      $primary-table-head
+  ), url(../../assets/images/sun-tornado.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  p{
+    position: relative;
+    top: 7px;
+    left: 13px;
+  }
+}
+.card-gm{
+ border-radius: 0 !important;
+  border-color: $primary-table-head !important;
+  -webkit-box-shadow: -5px 3px 52px -16px rgba(0,0,0,0.75);
+  -moz-box-shadow: -5px 3px 52px -16px rgba(0,0,0,0.75);
+  box-shadow: -5px 3px 52px -16px rgba(0,0,0,0.75);
+}
+

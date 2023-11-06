@@ -1,0 +1,345 @@
+/* You can add global styles to this file, and also import other style files */
+// If you want to override variables do it here
+@import "variables";
+
+$enable-ltr: true;
+$enable-rtl: true;
+
+// Import styles with default layout.
+@import "@coreui/coreui/scss/coreui";
+
+// Import Chart.js custom tooltips styles
+@import "@coreui/chartjs/scss/coreui-chartjs";
+
+// perfect scrollbar theming for use with [perfectScrollbar] directive
+//@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+@import "layout";
+
+// Some temp fixes
+@import "fixes";
+
+// Prism.js
+@import "examples";
+
+// If you want to add something do it here
+@import "custom";
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+@import 'styles/btn';
+@import 'styles/card';
+@import 'styles/effect';
+@import 'styles/colors';
+@import 'styles/input';
+@import 'styles/table';
+@import 'styles/icon';
+
+
+$themecolor: $primary-table-head;
+
+//-------------------------
+// TABLE RESPONSIVE
+//--------------------------
+$bp-lisa: 30em;
+$bp-bart: 48em;
+$bp-marge: 62em;
+$bp-homer: 75em;
+thead{
+  background-color: $primary-table-head;
+  color: $text-color;
+  .table-hover > tbody > tr:hover > * {
+    background-color: $primary-table-head!important;
+  }
+}
+button{
+  text-transform: uppercase;
+}
+form, .table-sm{
+  //text-transform: uppercase;
+  thead {
+    th{
+      //background-color: $themecolor;
+    }
+  }
+}
+ol{
+  //text-transform: uppercase;
+}
+
+.container {
+  //text-transform: uppercase;
+  //margin: 5% 3%;
+
+  @media (min-width: $bp-bart) {
+    //margin: 2%;
+  }
+
+  @media (min-width: $bp-homer) {
+    margin: 2em auto;
+    max-width: $bp-homer;
+  }
+}
+.responsive-table {
+
+  //width: 200%;
+  //margin-bottom: 1.5em;
+  border-spacing: 0;
+
+  @media (min-width: $bp-bart) {
+    font-size: 1em;
+  }
+
+  @media (min-width: $bp-marge) {
+    font-size: 1em;
+  }
+
+  thead {
+    // Accessibly hide <thead> on narrow viewports
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    @media (min-width: $bp-bart) {
+      // Unhide <thead> on wide viewports
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+
+    th {
+      //background-color: $themecolor;
+      text-transform: uppercase;
+      border: 1px solid #CCC;
+      font-weight: 500;
+      text-align: center;
+      //color: white;
+      padding: 2px;
+      &:first-of-type {
+        text-align: center;
+      }
+    }
+  }
+
+  // Set these items to display: block for narrow viewports
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    padding: 0;
+    text-align: right;
+    white-space: normal;
+  }
+
+  tr {
+    @media (min-width: $bp-bart) {
+      // Undo display: block
+      display: table-row;
+    }
+  }
+
+  th,
+  td {
+    padding: .5em;
+    padding: 0;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    @media (min-width: $bp-lisa) {
+      padding: .75em .5em;
+      text-align: right !important;
+    }
+
+    @media (min-width: $bp-bart) {
+      // Undo display: block
+      display: table-cell;
+      padding: .5em;
+      text-align: center !important;
+    }
+
+    @media (min-width: $bp-marge) {
+      padding: .75em .5em;
+      text-align: right;
+    }
+
+    @media (min-width: $bp-homer) {
+       padding: .75em;
+      text-align: right;
+    }
+  }
+
+  caption {
+    font-size: 1em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-align: center;
+
+    @media (min-width: $bp-bart) {
+      font-size: 1.5em;
+    }
+  }
+
+  tfoot {
+    font-size: .8em;
+    font-style: italic;
+
+    @media (min-width: $bp-marge) {
+      font-size: 1em;
+    }
+  }
+
+  tbody {
+    @media (min-width: $bp-bart) {
+      // Undo display: block
+      display: table-row-group;
+    }
+
+    tr {
+      //margin-bottom: 1em;
+
+      @media (min-width: $bp-bart) {
+        // Undo display: block
+        display: table-row;
+        border-width: 1px;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &:nth-of-type(even) {
+        @media (min-width: $bp-bart) {
+          //background-color: rgba(94,93,82,.1);
+        }
+      }
+    }
+
+    th[scope="row"] {
+      background-color: $themecolor;
+      color: white;
+      padding: 0;
+
+      @media (min-width: $bp-lisa) {
+       border-left: 1px solid  $themecolor;
+        border-right: 1px solid  $themecolor;
+        border-bottom: 1px solid  $themecolor;
+      }
+
+      @media (min-width: $bp-bart) {
+        background-color: transparent;
+        color: rgba(31, 40, 105, 0.99);
+        text-align: left;
+      }
+    }
+
+    td {
+      padding: 0;
+      @media (min-width: $bp-bart) {
+        border-left: 1px solid  $themecolor;
+        border-bottom: 1px solid  $themecolor;
+        border: 1px solid  $themecolor;
+        text-align: right;
+      }
+
+      &:last-of-type {
+        @media (min-width: $bp-bart) {
+          border-right: 1px solid  $themecolor;
+          text-align: center;
+        }
+      }
+    }
+
+    td[data-type=currency] {
+      text-align: left;
+      padding: 0 !important;
+    }
+
+    td[data-title]:before {
+      content: attr(data-title);
+      float: left;
+      //font-size: .8em;
+      color: rgba(94,93,82,.75);
+      padding: 0 !important;
+
+      @media (min-width: $bp-lisa) {
+        //font-size: 1em;
+      }
+
+      @media (min-width: $bp-bart) {
+        // Don’t show data-title labels
+        content: none;
+      }
+    }
+
+  }
+
+}
+input{
+  //padding: 7px !important;
+  //border: #9a9a9a 1px solid !important;
+}
+.body{
+
+  background-image: url(../assets/images/bag2.svg);
+}
+select {
+  //background: $themecolor !important;
+  option{
+    border: transparent !important;
+    padding: 5px;
+  }
+}
+select:focus{
+  outline: none;
+  border: 1.5px solid $themecolor !important;
+
+}
+select:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid black !important;
+  border-color: #fff transparent transparent transparent;
+}
+
+.menu{
+  margin-bottom: -10px !important;
+  border:none;
+}
+.card{
+  border:none !important;
+}
+.con{
+  border: none !important;
+}
+
+
+*::selection {
+  background: $themecolor;
+  color: #ffffff;
+}
+
+
+.img-order{
+  position: relative;
+  left: 30px;
+  top: 30px;
+  img{
+    border-radius: 10px !important;
+  }
+}
+.card-gm-float{
+  position: relative;
+  //padding: 15px 15px 15px 40px;
+  bottom: 50px;
+}
+

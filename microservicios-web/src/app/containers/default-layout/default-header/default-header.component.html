@@ -1,0 +1,81 @@
+<!--<c-header class="mb-4 d-print-none" position="sticky">-->
+<ng-container class="con">
+  <c-container [fluid]="true" class="ng_m_g con">
+    <button
+      toggle="visible"
+      cHeaderToggler
+      [cSidebarToggle]="sidebarId"
+      class="ps-1 color_white"
+    >
+      <svg cIcon
+           name="cilMenu"
+           size="lg"
+      ></svg>
+    </button>
+
+    <c-header-nav class="d-none d-lg-flex me-auto ">
+      <ng-container style="padding-bottom: -30px">
+        <c-nav-item *ngIf="hour >= 6 && hour < 12; else tarde">
+          <b>Buenos días 👋!</b>
+        </c-nav-item>
+      </ng-container>
+      <ng-template #tarde>
+        <c-nav-item>
+          <b>Buenos tardes 👋!</b>
+        </c-nav-item>
+      </ng-template>
+
+    </c-header-nav>
+
+    <c-header-nav class="d-none d-lg-flex ">
+      <c-nav-item>
+        <a cNavLink routerLinkActive="active" class="color_white">
+          <!--<b>{{user.name!}}</b>-->
+        </a>
+      </c-nav-item>
+      <c-nav-item>
+        <!--<a cNavLink routerLinkActive="active" class="color_white">
+          {{user.email!}}</a>-->
+      </c-nav-item>
+    </c-header-nav>
+    <c-header-nav class="ms-3">
+      <ng-container *ngTemplateOutlet="userDropdown"></ng-container>
+    </c-header-nav>
+
+  </c-container>
+  <c-container [fluid]="true" class="con">
+    <c-breadcrumb-router class="menu"></c-breadcrumb-router>
+  </c-container>
+</ng-container>
+<!--</c-header>-->
+
+<ng-template #userDropdown class="con">
+  <c-dropdown alignment="end" variant="nav-item">
+    <button
+      cButton
+      color=""
+      [caret]="false"
+      cDropdownToggle
+      class="py-0"
+    >
+      <c-avatar
+        cTextColor="primary"
+        shape="rounded-1"
+        size="md"
+        src="./assets/img/avatars/user.png"
+        status="success"
+      >
+      </c-avatar>
+    </button>
+    <ul cDropdownMenu class="pt-0 pr-5 w-auto">
+      <li>
+        <a cDropdownItem (click)="logout()" style="cursor: pointer;">
+          <svg cIcon class="me-2" name="cilLockLocked"></svg>
+          Salir
+        </a>
+      </li>
+      <li></li>
+    </ul>
+  </c-dropdown>
+</ng-template>
+

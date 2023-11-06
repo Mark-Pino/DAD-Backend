@@ -1,0 +1,65 @@
+.btn-gm-success{
+    color: white;
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px !important;
+    background-color: #0ebb2bad;
+    border: none;
+    &:hover{
+        background-color: #0ebb2be3;
+    }
+}
+.btn-gm-danger{
+    color: white;
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px !important;
+    background-color: $primary-table-head;
+    border: none;
+    &:hover{
+        background-color: $primary-dark;
+    }
+}
+.btn-gm-small{
+  max-width: 15px;
+  max-height: 15px;
+
+}
+.btn-gm-small span{
+  position: relative;
+  right: 5px;
+  bottom: 9px;
+}
+.btn-gm-search{
+  margin-left: -140px;
+}
+.btn-gm-return{
+  border: none;
+  background-color: white !important;
+  border-bottom: 1px $primary-table-head solid;
+  color: $primary-table-head;
+  &:hover{
+    color: $primary-dark;
+  }
+}
+.btn-gm-sm-dark{
+  color: #252525;
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 10px 30px 10px 30px !important;
+  background-color: transparent;
+  border: 1px solid #252525;
+  &:hover{
+    background-color: #252525;
+    color: white;
+  }
+
+}
+.float-gm-total{
+  position: absolute;
+  bottom: 17%;
+  right: 3%;
+}
+.btn-opcional-float{
+  margin-top: 8% !important;
+}
