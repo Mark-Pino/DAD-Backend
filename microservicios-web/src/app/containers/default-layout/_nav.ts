@@ -17,6 +17,10 @@ export const navItems: INavData[] = [
       {
         name: 'persona',
         url: '/dashboard/setup/person'
+      },
+      {
+        name: 'cliente',
+        url: '/dashboard/setup/client'
       }
     ]
   },

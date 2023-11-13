@@ -8,9 +8,10 @@ const routes: Routes = [
     component: SetupComponent,
     children: [
       {
-        path: 'period',
-        loadChildren: () => import('./period/period.module').then(m => m.PeriodModule),
+        path: 'client',
+        loadChildren: () => import('./client/client.module').then(m => m.ClientModule),
       },
+
       {
         path: 'person',
         loadChildren: () => import('./person/person.module').then(m => m.PersonModule),

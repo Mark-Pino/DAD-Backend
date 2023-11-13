@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   abcForms: any;
   loginForm = new FormGroup({
 
-    userName: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]),
+    userName: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
 
   });

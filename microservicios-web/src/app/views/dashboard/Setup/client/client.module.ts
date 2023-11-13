@@ -2,13 +2,12 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
-import {PeriodRoutingModule, rutedComponents} from './period-routing.module';
-import {PeriodListComponent} from './components/list/period-list.component';
+import {ClientRoutingModule, rutedComponents} from './client-routing.module';
+
 import {ConfirmDialogModule, FormsComponentValidModule, PaginationModule} from '../../../../shared';
 import {ButtonModule, CardModule, GridModule} from '@coreui/angular';
-import {PeriodNewComponent} from "./components/form/period-new.component";
-import {PeriodEditComponent} from "./components/form/period-edit.component";
-import {PeriodFilterComponent} from "./components/filters/period-filter.component";
+import {ClientListComponent} from "./components/list/client-list.component";
+import {ClientsService} from "../../../../providers/services/setup/clients.service";
 
 const SHARED_MODULES: any[] = [
   ConfirmDialogModule,
@@ -16,11 +15,9 @@ const SHARED_MODULES: any[] = [
   PaginationModule,
 ];
 
-const COMPONENTS: any[] = [
+const COMPONENTS: any[] = [ClientListComponent];
 
-];
-
-const SERVICES: any[] = [];
+const SERVICES: any[] = [ClientsService];
 
 const NG_MODULES: any = [];
 
@@ -35,7 +32,7 @@ const PIPES: any = [];
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    PeriodRoutingModule,
+    ClientRoutingModule,
     CardModule,
     ButtonModule,
     GridModule,
@@ -47,13 +44,12 @@ const PIPES: any = [];
     ...COMPONENTS,
     ...rutedComponents,
     ...PIPES,
-    PeriodFilterComponent,
+
   ],
   providers: [
     ...SERVICES,
   ],
-  exports: [
-  ]
+  exports: []
 })
 export class ClientModule {
 }
